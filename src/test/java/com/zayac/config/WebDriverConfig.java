@@ -2,9 +2,8 @@ package com.zayac.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.LoadPolicy(Config.LoadType.FIRST)
 @Config.Sources({
-        "classpath:properties/${env}.properties"
+        "classpath:${env}.properties"
 })
 
 public interface WebDriverConfig extends Config {
