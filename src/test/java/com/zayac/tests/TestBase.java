@@ -16,6 +16,7 @@ class TestBase extends BrowserstackDriver{
 
     @BeforeAll
     static void beforeAll() {
+        System.setProperty("device", BrowserstackDriver.class.getName());
         Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
     }
