@@ -2,9 +2,9 @@ package com.zayac.config;
 
 import org.aeonbits.owner.Config;
 
+@Config.LoadPolicy(Config.LoadType.FIRST)
 @Config.Sources({
-        "classpath:${device}.properties",
-        "classpath:mobile.properties"
+        "classpath:${device}.properties"
 })
 
 public interface WebDriverConfig extends Config {
