@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.FIRST)
 @Config.Sources({
-        "classpath:${device}.properties"
+        "classpath:properties/${env}.properties"
 })
 
 public interface WebDriverConfig extends Config {
