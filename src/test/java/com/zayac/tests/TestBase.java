@@ -3,6 +3,7 @@ package com.zayac.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
+import com.zayac.config.WebDriverConfig;
 import com.zayac.drivers.BrowserstackDriver;
 import com.zayac.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -16,6 +17,7 @@ class TestBase {
 
     @BeforeAll
     static void beforeAll() {
+        System.setProperty("device", String.valueOf(System.getProperties()));
         Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
     }
