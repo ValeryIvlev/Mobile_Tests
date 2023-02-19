@@ -16,6 +16,7 @@ public class SelenideTest extends TestBase {
     @Test
     @Tag("android")
     void searchTestAndroid() {
+        System.setProperty("device", "Android");
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Java");
@@ -27,6 +28,7 @@ public class SelenideTest extends TestBase {
     @Test
     @Tag("ios")
     void loginTestIos() {
+        System.setProperty("device", "iOS");
             step("Click button", () ->{
                 $(id("Text Button")).click();
             });

@@ -13,11 +13,10 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.*;
 
-class TestBase {
+class TestBase extends BrowserstackDriver{
 
     @BeforeAll
     static void beforeAll() {
-        System.setProperty("device", String.valueOf(System.getProperties()));
         Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
     }
