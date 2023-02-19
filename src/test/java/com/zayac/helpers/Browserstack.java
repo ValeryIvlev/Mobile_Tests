@@ -1,6 +1,5 @@
 package com.zayac.helpers;
 
-import static com.zayac.helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 
@@ -10,7 +9,6 @@ public class Browserstack {
 
         return given()
                 .log().all()
-                //.filter(withCustomTemplates())
                 .auth().basic("bsuser_m2GR1Q", "QxMmzeCKGrzs3ux85j45")
                 .when()
                 .get(url)

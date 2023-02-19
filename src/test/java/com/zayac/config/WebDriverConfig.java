@@ -4,6 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.Sources({
         "classpath:${device}.properties",
+        "classpath:mobile.properties"
 })
 
 public interface WebDriverConfig extends Config {
