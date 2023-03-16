@@ -24,6 +24,7 @@ public class SelenideTest extends TestBase {
                 $$(id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(sizeGreaterThan(0)));
     }
+    
     @Test
     @Tag("ios")
     void loginTestIos() {
@@ -40,4 +41,3 @@ public class SelenideTest extends TestBase {
             });
         }
 }
-
